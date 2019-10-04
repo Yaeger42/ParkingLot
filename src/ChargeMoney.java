@@ -41,6 +41,10 @@ public class ChargeMoney {
 
     public int setCharge(){
         int result = 0;
+        //Customer cus = new Customer();
+        //cus.setEntrance();
+        //cus.setExit();
+        // CUÁL ES LA MEJOR CABRONA FORMA DE HACER ESTO? D: AHHHH
         if (setHoursTime() == 0){
             ;
         }
