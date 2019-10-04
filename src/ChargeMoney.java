@@ -1,9 +1,9 @@
 import java.time.LocalTime;
 
 public class ChargeMoney {
-
-    public static final double hoursPrice = 0.03;
-    public static final double minutesPrice = 0.02;
+    //TODO PRICES CHANGED TO INT, EVERYTHING IS INT NOW
+    public static final int hoursPrice = 2;
+    public static final int minutesPrice = 1;
 
     public static void main(String[] args) {
         ChargeMoney p = new ChargeMoney();
@@ -15,7 +15,7 @@ public class ChargeMoney {
         System.out.println("localTime = " + localTime);
         System.out.println("Hours = " +hours+ " Minutes = "+minutes);
     }
-    public double setMinutesTime() {
+    public int setMinutesTime() {
         //Hours
         LocalTime localTime = LocalTime.now();
         String str = localTime.toString();
@@ -24,7 +24,7 @@ public class ChargeMoney {
         String concatMinutes = Integer.toString(min1) + Integer.toString(min2);
         return Integer.parseInt(concatMinutes);
     }
-    public double setHoursTime(){
+    public int setHoursTime(){
         //Minutes here:
         LocalTime localTime = LocalTime.now();
         String str = localTime.toString();
@@ -39,14 +39,14 @@ public class ChargeMoney {
         return Integer.parseInt(concatHours);
     }
 
-    public double setCharge(){
+    public int setCharge(){
         int result = 0;
         if (setHoursTime() == 0){
             ;
         }
         else{
-            //FIXME pls halp :'v I have doubles and return shit
-            result = (int) (hoursPrice* setHoursTime() + minutesPrice * setMinutesTime());
+            //TODO Fixed! :D now we can proceed, EVERYTHING IS A NICE INT
+            result = (hoursPrice* setHoursTime() + minutesPrice * setMinutesTime());
         }
         return result;
     }

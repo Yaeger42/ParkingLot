@@ -1,8 +1,8 @@
 import java.util.Vector;
 class Greedy
 {
-
-    static int deno[] = {1, 2, 5, 10};
+    //Changed denominations, 20 added
+    static int deno[] = {1, 2, 5, 10, 20};
     static int n = deno.length;
 
     static Vector <Integer> findMin(int V)
