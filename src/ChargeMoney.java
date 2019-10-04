@@ -39,6 +39,7 @@ public class ChargeMoney {
         return Integer.parseInt(concatHours);
     }
 
+    //MAYBE THIS WON'T work anymore
     public int setCharge//(int entTime, int exitTime)
     () {
         int result = 0;

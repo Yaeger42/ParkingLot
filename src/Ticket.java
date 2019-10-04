@@ -7,7 +7,7 @@ import javax.swing.*;
 
 public class Ticket {
 
-    private int ticketID = 0;
+    public int ticketID = 0;
     public static void main(String[] args) {
         Ticket tk = new Ticket();
     }

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ecd41d02-ba96-4311-8a14-a0fd15719f4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Customer.java" afterDir="false" />
+    <list default="true" id="ecd41d02-ba96-4311-8a14-a0fd15719f4d" name="Default Changelist" comment="Working UI, still missing the exit time and adding the ticket to a customer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ChargeMoney.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChargeMoney.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ticket.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +47,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ChargeMoney">
+  <component name="RunManager" selected="Application.Ticket">
     <configuration name="ChargeMoney" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ChargeMoney" />
       <module name="ParkingLot" />
@@ -70,8 +71,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ChargeMoney" />
         <item itemvalue="Application.Ticket" />
+        <item itemvalue="Application.ChargeMoney" />
         <item itemvalue="Application.DisplayImage" />
       </list>
     </recent_temporary>
@@ -87,6 +88,14 @@
       <option name="presentableId" value="Default" />
       <updated>1570110652949</updated>
     </task>
+    <task id="LOCAL-00001" summary="Working UI, still missing the exit time and adding the ticket to a customer">
+      <created>1570202841793</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570202841793</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,5 +108,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Working UI, still missing the exit time and adding the ticket to a customer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working UI, still missing the exit time and adding the ticket to a customer" />
   </component>
 </project>
