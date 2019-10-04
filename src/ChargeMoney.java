@@ -10,6 +10,8 @@ public class ChargeMoney {
         double minutes = p.setMinutesTime();
         double hours = p.setHoursTime();
         LocalTime localTime = LocalTime.now();
+        double charged = p.setCharge();
+        System.out.println("charged = " + charged);
         System.out.println("localTime = " + localTime);
         System.out.println("Hours = " +hours+ " Minutes = "+minutes);
     }
@@ -43,8 +45,9 @@ public class ChargeMoney {
             ;
         }
         else{
-            //FIXME pls halp :'v I have doubles.
-            result = hoursPrice* setHoursTime() + minutesPrice * setMinutesTime();
+            //FIXME pls halp :'v I have doubles and return shit
+            result = (int) (hoursPrice* setHoursTime() + minutesPrice * setMinutesTime());
         }
+        return result;
     }
 }
