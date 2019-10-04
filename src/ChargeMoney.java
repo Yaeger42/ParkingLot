@@ -39,7 +39,8 @@ public class ChargeMoney {
         return Integer.parseInt(concatHours);
     }
 
-    public int setCharge(){
+    public int setCharge//(int entTime, int exitTime)
+    () {
         int result = 0;
         //Customer cus = new Customer();
         //cus.setEntrance();

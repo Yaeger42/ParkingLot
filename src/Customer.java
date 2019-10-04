@@ -3,7 +3,8 @@ public class Customer {
     int entranceTime = 0 ;
     int exitTime = 0;
 
-    public int setEntrance(){
+    public int setEntrance//(int hours, int minutes)
+    () {
         ChargeMoney ch = new ChargeMoney();
         ch.setHoursTime();
         ch.setMinutesTime();
@@ -11,7 +12,8 @@ public class Customer {
         return this.entranceTime ;
     }
 
-    public int setExit(){
+    public int setExit//(int exithours, int exitminutes)
+    () {
         ChargeMoney ch = new ChargeMoney();
         ch.setHoursTime();
         ch.setMinutesTime();
