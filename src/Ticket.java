@@ -2,6 +2,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.jar.JarEntry;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
@@ -14,10 +15,14 @@ public class Ticket {
 
     public Ticket(){
         JButton ticketButton = new JButton("Get ticket");
+        JButton payButton = new JButton("Pay: ");
+        JTextField idEnter = new JTextField("Enter the id: "); //How do I get the data from this?
         JTextField id = new JTextField(20);
         JTextField entTime = new JTextField(20);
         JTextField exitTime = new JTextField(20);
+
         ticketButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent evento){
                 ChargeMoney ch = new ChargeMoney();
                 ticketID ++;
@@ -25,6 +30,14 @@ public class Ticket {
                 entTime.setText("Time of entry: " + ch.setHoursTime() +":"+  ch.setMinutesTime());
             }
         });
+
+        payButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evento){
+
+            }
+        });
+
 
         JFrame frame = new JFrame();
         JPanel panel = new JPanel();
