@@ -35,5 +35,6 @@ public class Customer {
         //FIXME  new function added, is it okay? D: PANIC
         gr.findMin(payment);
         return payment;
+        //Push
     }
 }
