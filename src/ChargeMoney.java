@@ -7,10 +7,10 @@ public class ChargeMoney {
 
     public static void main(String[] args) {
         ChargeMoney p = new ChargeMoney();
-        double minutes = p.setMinutesTime();
-        double hours = p.setHoursTime();
+        int minutes = p.setMinutesTime();
+        int hours = p.setHoursTime();
         LocalTime localTime = LocalTime.now();
-        double charged = p.setCharge();
+        int charged = p.setCharge();
         System.out.println("charged = " + charged);
         System.out.println("localTime = " + localTime);
         System.out.println("Hours = " +hours+ " Minutes = "+minutes);

@@ -5,6 +5,7 @@ public class Customer {
     int exitTime = 0;
     int payment = 0;
 
+    //Function can be a parameter?
     public int setEntrance//(int hours, int minutes)
     () {
         ChargeMoney ch = new ChargeMoney();
