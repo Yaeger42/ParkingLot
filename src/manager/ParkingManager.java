@@ -16,6 +16,7 @@ public class ParkingManager {
     private Ticket ticket;
     private int ticketId = 0;
     private List <Ticket> ticketList = new ArrayList();
+
     public ParkingManager(ManagerListener listener){
         this.listener = listener;
     }
