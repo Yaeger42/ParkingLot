@@ -1,13 +1,13 @@
 package manager;
 
 import java.util.Vector;
-class Greedy
+public class Greedy
 {
     //Changed denominations, 20 added
     static int deno[] = {1, 2, 5, 10, 20};
     static int n = deno.length;
 
-    static Vector <Integer> findMin(int V)
+    public static Vector <Integer> findMin(int V)
     {
         // Initialize result
         Vector<Integer> ans = new Vector<>();

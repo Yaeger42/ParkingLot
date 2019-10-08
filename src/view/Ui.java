@@ -1,6 +1,7 @@
 package view;
 
 import Model.Ticket;
+import manager.Greedy;
 import manager.ParkingManager;
 
 import javax.swing.*;
@@ -12,6 +13,7 @@ import java.util.List;
 
 public class Ui implements ManagerListener {
     JTable ticketsTable;
+    Greedy greedy;
     ParkingManager parkingManager = new ParkingManager(this);
     int money = 0;
     DefaultTableModel model = new DefaultTableModel();
@@ -38,8 +40,8 @@ public class Ui implements ManagerListener {
         JButton pay10 = new JButton("10");
         JTextField moneyEntered = new JTextField("Money: " + money);
         JTextField idEnter = new JTextField(); //How do I get the data from this?
-        JTextField id = new JTextField(20);
-        JTextField entTime = new JTextField(20);
+        JTextField id = new JTextField(30);
+        JTextField change = new JTextField(30);
         JTextField exitTime = new JTextField(20);
 
         pay1.addActionListener(new ActionListener() {
@@ -93,28 +95,34 @@ public class Ui implements ManagerListener {
             public void actionPerformed(ActionEvent evento) {
                 int id = Integer.parseInt(idEnter.getText());
                 parkingManager.payTicket(money, id);
+                change.setText("Change: " + greedy.findMin(money).toString());
                 money = 0;
+                moneyEntered.setText("Money: " + money);
             }
         });
 
         ticketsTable = new JTable(model);
+        ticketsTable.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
         JTable priceTable = new JTable(data, columnNames);
         JFrame frame = new JFrame();
         JScrollPane scroll = new JScrollPane(priceTable);
+
         JPanel panel = new JPanel();
+        panel.setSize(20, 20);
         frame.add(ticketsTable);
         frame.add(new JLabel("Enter the id: "));
         frame.add(idEnter);
+        frame.add(change);
         frame.add(pay1);
         frame.add(pay2);
         frame.add(pay5);
         frame.add(pay10);
         frame.add(moneyEntered);
         frame.add(payButton);
-        panel.setLayout(new GridLayout());
+        //panel.setLayout(new GridLayout());
         frame.setLayout(new FlowLayout());
         frame.setSize(1300, 400);
-        panel.setSize(400, 350);
+        //panel.setSize(400, 350);
         panel.add(scroll);
         frame.add(priceTable);
         frame.add(ticketButton);
@@ -124,7 +132,7 @@ public class Ui implements ManagerListener {
         //panel.add(exitTime);
         frame.setVisible(true);
         panel.setVisible(true);
-        //frame.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
+        frame.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
